@@ -3,7 +3,7 @@ IDO
 
 # Tp-Rest
 
-## partie 1
+## Partie 1:
 
 2) On peut piloter le shelly plug depuis son interface sur l'adresse suivante: http://10.202.255.252/
 Il suffit de cliquer sur le bouton power afin de l'allumer/éteindre.
@@ -122,4 +122,53 @@ Transmission Control Protocol, Src Port: 48742, Dst Port: 80, Seq: 95, Ack: 238,
 On peut voir qu'il y a les 3 paquets tcp pour établir la connexion, ensuite viens la requette HTTP afin d'allumer la LED, le serveur nous répond "OK".
 Pour allumer un plug, le paquet en question envoyé fait 147 octets. (4eme trame)
 
-7) 
+7) Pour faire ce tag, il faut entrer : git tag -a partie_1 -m "partie_1"
+Et ensuite le push: git push --tags
+
+
+## Partie 2:
+
+Notre LED a comme ip 10.202.0.107 et est connecté en tant que 6A6534 sur le brokerMQTT
+
+Pour lancer une commande sur la led, il faut entrer:
+mosquitto_pub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0/command -m "commande à effectuer"
+
+Pour allumer la LED: mosquitto_pub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0/command -m "on"
+
+Pour éteindre la LED: mosquitto_pub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0/command -m "off"
+
+Pour afficher la consommation: mosquitto_sub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0/power -C 1
+
+Pour afficher son etat: mosquitto_sub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0 -C 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
