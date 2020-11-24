@@ -144,7 +144,11 @@ Pour afficher son etat: mosquitto_sub -h 10.202.0.107 -t shellies/shellyplug-s-6
 
 ## Partie 3
 
+Pour installer nginx: sudo apt install nginx
 
+Pour lancer nginx: sudo service nginx
+Penser à vérifier qu'il fonctionne bien : sudo service nginx status
+Et ouvrir une page avec "localhost", une page "Welcome to nginx!" devrait etre affiché.
 
 
 
