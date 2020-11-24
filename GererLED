@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ "$(bash etatLED)" == "true" ]; then
+
+bash eteindreLED
+
+else
+
+bash allumerLED
+
+fi
+
+
