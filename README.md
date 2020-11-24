@@ -142,7 +142,7 @@ Pour afficher la consommation: mosquitto_sub -h 10.202.0.107 -t shellies/shellyp
 Pour afficher son etat: mosquitto_sub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0 -C 1
 
 
-
+## Partie 3
 
 
 
