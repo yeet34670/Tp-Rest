@@ -1,12 +1,18 @@
 #!/bin/bash
 
 if [ "$(bash etatLED)" == "true" ]; then
-
+echo "la LED était allumée... "
+sleep 0.5
 bash eteindreLED
 
 else
 
+echo "la LED était éteinte..."
+sleep 0.5
 bash allumerLED
+echo "récupération des watts... "
+sleep 5
+bash powerstatus
 
 fi
 
